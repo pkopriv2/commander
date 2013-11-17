@@ -1,0 +1,4 @@
+1.0.0:
+    release_date: 11-17-2013
+    changes: 
+        - Initial release
