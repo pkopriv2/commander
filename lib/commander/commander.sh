@@ -37,6 +37,9 @@ commander_run() {
 		exit $?
 	fi
 
+    # set the separator
+    _IFS=$IFS; IFS=$'\n'
+
 	# try to get the command
 	if ! cmd_tuple=( $(command_get_from_args "$@" ) ) 
 	then
@@ -47,6 +50,9 @@ commander_run() {
 		exit 1
 	fi
 
+    # reset the separator
+    IFS=$_IFS
+
 	# load the command
 	source ${cmd_tuple[0]}
 
@@ -56,7 +62,7 @@ commander_run() {
 		command_help ${cmd_tuple[0]}
 		exit $?
 	fi
-
+    
 	# execute the command
 	$(command_get_main_fn ${cmd_tuple[0]}) "${cmd_tuple[@]:1}"
 	exit $?

@@ -32,11 +32,11 @@ command_get_from_args() {
 	# okay, we found it.  emit the command.
 	echo "$cur".sh
 
-	# okay, now simply echo the remaining args
-	while (( $# > 0 ))
-	do
-		echo $1; shift
-	done
+    # okay, now simply echo the remaining args
+    while (( $# > 0 ))
+    do
+        echo "$1"; shift
+    done
 }
 
 # usage: command_get_main_fn <file>
