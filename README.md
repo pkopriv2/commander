@@ -1,6 +1,49 @@
 # Commander 
 
-Commander is a tool used to write other tools.  
+Commander attempts to generalize the basic cli command pattern in bash.   For tools that tend to have
+a tree like command structure, this tool makes calling those subcommands trivial.  For example, given 
+the following project structure:
+
+```
+bin/tool
+commands/test.sh
+commands/sub/test.sh
+commands/sub2/test.sh
+```
+
+Given commander, they could be run via:  
+```
+tool test
+tool sub test
+tool sub2 test
+```
+
+Arguments can be passed through transparently and are correctly expanded.
+
+# Installation
+
+Commander does not come with any executable scripts.  It must be required by other bashum projects.
+
+In a project.sh file:
+
+```
+depends 'commander'
+```
+
+# Usage
+
+Inside an executable:
+
+```
+#! /usr/bin/env bash
+
+require_bashum 'commander'
+require 'lib/commander/commander.sh'
+
+commander_run "$@"
+```
+
+Done!
 
 
 ## Copyright
