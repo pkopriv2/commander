@@ -1,3 +1,7 @@
+1.0.1:
+    release_date: 11-18-2013
+    changes: 
+        - Moving to bash builtin for string capitalization
 1.0.0:
     release_date: 11-17-2013
     changes: 
