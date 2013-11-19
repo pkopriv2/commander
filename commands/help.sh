@@ -5,7 +5,7 @@ help() {
 	local name=$(project_file_get_name "$project_root/project.sh")
 	local description=$(project_file_get_description "$project_root/project.sh")
 
-	bold "$(echo $name | sed  's|\([a-Z]\)|\U\1|g') HELP"
+	bold "${name^^} HELP"
 
 	echo 
     echo "        $description"
