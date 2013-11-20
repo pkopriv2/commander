@@ -1,3 +1,7 @@
+1.0.2:
+    release_date: 11-19-2013
+    changes: 
+        - Fixing mangled IFS when searching for commands during help
 1.0.1:
     release_date: 11-18-2013
     changes: 
