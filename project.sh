@@ -1,5 +1,5 @@
 name          "commander"
-version       "1.0.2"
+version       "1.0.3-SNAPSHOT"
 description   "Commander is a tool to facilitate creating multi command tools" 
 
 file          "commands"
